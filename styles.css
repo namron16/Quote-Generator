@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --var-dark-bg-: #1f212c;
+    --var-light-clr: #ffffff;
+    --var-blue-clr: #127ee3;
+    --var-bg-clr: #5a79a5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+
+
+body {
+    position: relative;
+    background-color: var(--var-bg-clr);
+}
+
+.card {
+    background-color: var(--var-light-clr);
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 20px;
+    width: 60%;
+    height: 100%;
+}
+
+.quoteLine {
+    background-color: var(--var-blue-clr);
+    height: 3px;
+    width: 100px;
+    margin: 0 auto;
+}
+
+.card h1 {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.cardQuote {
+    text-align: center;
+    margin: 3rem 3rem 2.5rem 3rem;
+    font-family: "Gamja Flower", sans-serif;
+    font-size: 2rem;
+}
+
+.quoteAuthor {
+    text-align: end;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    margin-right: 4rem;
+}
+
+
+#categoryBtn {
+    margin: 1rem 2rem;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    border: none;
+    background-color: var(--var-blue-clr);
+    color: var(--var-light-clr);
+}
+
+.categories {
+    background-color: var(--var-light-clr);
+    width: 250px;
+    position: absolute;
+    top: 150px;
+    left: 27%;
+    border-radius: 5px;
+    height: 250px;
+    padding: 10px;
+    overflow: auto;
+    z-index: 1;
+    border: 1px solid grey;
+    visibility: hidden;
+}
+
+.categories::-webkit-scrollbar {
+    display: none;
+}
+
+.categories li {
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-family: 'Poppins', sans-serif;
+    padding: 5px;
+    list-style: none;
+
+    cursor: pointer;
+}
+
+.categories li:hover {
+    background-color: rgb(247, 247, 247);
+}
+
+.categoryLine {
+    background-color: grey;
+    height: 2px;
+    width: 100px;
+
+}
+
+.hidden {
+    visibility: visible;
+}
+
+
+@media (max-width: 550px) {
+    .card {
+        margin: 2rem 1rem;
+        background-color: var(--var-light-clr);
+        padding: 20px;
+        border-radius: 20px;
+        width: 85%;
+        height: 100%;
+    }
+
+    .quoteLine {
+        background-color: var(--var-blue-clr);
+        height: 2px;
+        width: 100px;
+        margin: 0 auto;
+    }
+
+    .card h1 {
+        font-size: 1.5rem;
+    }
+
+    .cardQuote {
+        margin: 2rem 1rem 1rem 1rem;
+        font-size: 1rem;
+    }
+
+    .quoteAuthor {
+        font-size: 0.8rem;
+        margin-right: 1rem;
+    }
+
+
+    #categoryBtn {
+        padding: 6px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 1rem;
+        margin-top: 40px;
+    }
+
+    .categories {
+        width: 150px;
+        top: 150px;
+        left: 25%;
+        height: 150px;
+    }
+
+    .categories li {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 990px) {
+    .card {
+        width: 90%;
+        height: 100%;
+    }
+
+    .card h1 {
+        font-size: 1.7rem;
+    }
+
+    .cardQuote {
+        margin: 2rem 1rem 1rem 1rem;
+        font-size: 1.5rem;
+    }
+
+    .quoteAuthor {
+        font-size: 1.2rem;
+        margin-right: 1rem;
+    }
+
+
+    #categoryBtn {
+        border-radius: 5px;
+        font-size: 1.5rem;
+    }
+
+}
