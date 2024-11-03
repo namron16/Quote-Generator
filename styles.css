@@ -167,6 +167,10 @@ body {
         height: 200px;
     }
 
+    .category-card-options li {
+        font-size: 1.8rem;
+    }
+
 }
 
 
