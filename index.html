@@ -5,22 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/00440afab5.js" crossorigin="anonymous"></script>
     <title>Quote Generator</title>
 </head>
 
 <body>
-    <div class="card">
+    <div class="card" id="quoteCard">
         <h1>Quote of the Day</h1>
         <div class="quoteLine"></div>
         <p class="cardQuote" id="quote">Loading...</p>
         <i>
             <p class="quoteAuthor" id="author">Loading...</p>
         </i>
+        <div class="category-card" id="category-card">
+            <div class="header">
+                <i class="fa-solid fa-x" id="close-button"></i>
+            </div>
+            <div class="category-card-options" id="options">
+            </div>
+        </div>
         <button class="category" id="categoryBtn">Category</button>
+       
     </div>
-    <div class="categories" id="categories">
 
-    </div>
+
     <script src="main.js"></script>
 </body>
 

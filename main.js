@@ -1,7 +1,12 @@
 let quote = document.getElementById("quote");
 let author = document.getElementById("author");
-const options = document.getElementById("categories");
 const categoryBtn = document.getElementById("categoryBtn");
+const categoryCard = document.getElementById('category-card');
+const categoryOptions = document.getElementById('options')
+const closeBtn = document.getElementById('close-button')
+
+
+
 
 fetchQuote();
 async function fetchQuote() {
@@ -21,7 +26,7 @@ async function fetchQuote() {
 }
 
 async function fetchQuoteCategory(userCategory) {
-  options.classList.toggle("hidden");
+  categoryCard.classList.toggle("hidden");
   try {
     const quoteResponse = await fetch(
       `https://api.api-ninjas.com/v1/quotes?category=${userCategory}`,
@@ -41,8 +46,15 @@ async function fetchQuoteCategory(userCategory) {
 }
 
 categoryBtn.addEventListener("click", () => {
-  options.classList.toggle("hidden");
+  categoryCard.classList.toggle('hidden')
 });
+
+
+closeBtn.addEventListener('click', () => {
+  categoryCard.classList.toggle('hidden')
+})
+
+
 
 const categoryArr = [
   "age",
@@ -89,7 +101,9 @@ function renderCategories() {
   categoryArr.forEach((category) => {
     categoryHTML += `<li onclick="fetchQuoteCategory('${category}')">${category}</li>
                       <div class="categoryLine"></div>`;
-    options.innerHTML = categoryHTML;
+
+    categoryOptions.innerHTML = categoryHTML;
+    
   });
 }
 

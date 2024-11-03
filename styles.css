@@ -20,7 +20,7 @@
 
 
 body {
-    position: relative;
+
     background-color: var(--var-bg-clr);
 }
 
@@ -72,36 +72,54 @@ body {
     color: var(--var-light-clr);
 }
 
-.categories {
-    background-color: var(--var-light-clr);
-    width: 250px;
-    position: absolute;
-    top: 150px;
-    left: 27%;
-    border-radius: 5px;
-    height: 250px;
-    padding: 10px;
-    overflow: auto;
-    z-index: 1;
-    border: 1px solid grey;
+.category-card{
     visibility: hidden;
 }
 
-.categories::-webkit-scrollbar {
+.category-card{
+    background-color: var(--var-light-clr);
+    width: 250px;
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    border-radius: 5px;
+    height: 250px;
+    padding: 0px 10px 10px 10px;
+    overflow: auto;
+    z-index: 1;
+    border: 1px solid grey;
+    
+}
+
+.header{
+    width: 100%;
+    height: 10%;
+    text-align: end;
+    background-color: var(--var-light-clr);
+    position: sticky;
+    top: 0px;
+}
+
+.fa-x{
+    padding: 10px 2px 10px 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.category-card::-webkit-scrollbar {
     display: none;
 }
 
-.categories li {
+.category-card-options li {
     text-decoration: none;
     font-size: 1.7rem;
     font-family: 'Poppins', sans-serif;
     padding: 5px;
     list-style: none;
-
     cursor: pointer;
 }
 
-.categories li:hover {
+.category-card-options li:hover {
     background-color: rgb(247, 247, 247);
 }
 
@@ -116,14 +134,49 @@ body {
     visibility: visible;
 }
 
-
-@media (max-width: 550px) {
+@media (max-width: 990px) {
     .card {
-        margin: 2rem 1rem;
+        width: 70%;
+        height: 100%;
+    }
+
+    .card h1 {
+        font-size: 1.7rem;
+    }
+
+    .cardQuote {
+        margin: 2rem 1rem 1rem 1rem;
+        font-size: 1.5rem;
+    }
+
+    .quoteAuthor {
+        font-size: 1.2rem;
+        margin-right: 1rem;
+    }
+
+
+    #categoryBtn {
+        border-radius: 5px;
+        font-size: 1.5rem;
+    }
+
+    .category-card {
+        width: 150px;
+        top: 100px;
+        left: 30%;
+        height: 150px;
+    }
+
+}
+
+
+@media (max-width: 590px) {
+    .card {
+        margin: 2rem 2rem;
         background-color: var(--var-light-clr);
         padding: 20px;
         border-radius: 20px;
-        width: 85%;
+        width: 70%;
         height: 100%;
     }
 
@@ -157,11 +210,11 @@ body {
         margin-top: 40px;
     }
 
-    .categories {
+    .category-card {
         width: 150px;
-        top: 150px;
-        left: 25%;
-        height: 150px;
+        top: 100px;
+        left: 30%;
+        height: 200px;
     }
 
     .categories li {
@@ -170,30 +223,3 @@ body {
 
 }
 
-@media (max-width: 990px) {
-    .card {
-        width: 90%;
-        height: 100%;
-    }
-
-    .card h1 {
-        font-size: 1.7rem;
-    }
-
-    .cardQuote {
-        margin: 2rem 1rem 1rem 1rem;
-        font-size: 1.5rem;
-    }
-
-    .quoteAuthor {
-        font-size: 1.2rem;
-        margin-right: 1rem;
-    }
-
-
-    #categoryBtn {
-        border-radius: 5px;
-        font-size: 1.5rem;
-    }
-
-}
