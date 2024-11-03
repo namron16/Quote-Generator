@@ -62,7 +62,7 @@ body {
 
 
 #categoryBtn {
-    margin: 1rem 2rem;
+    margin: 1rem 1rem;
     padding: 10px;
     cursor: pointer;
     border-radius: 5px;
@@ -72,35 +72,35 @@ body {
     color: var(--var-light-clr);
 }
 
-.category-card{
+.category-card {
     visibility: hidden;
 }
 
-.category-card{
+.category-card {
     background-color: var(--var-light-clr);
-    width: 250px;
+    width: 300px;
     position: absolute;
     top: 30%;
     left: 35%;
     border-radius: 5px;
     height: 250px;
     padding: 0px 10px 10px 10px;
-    overflow: auto;
+    overflow-y: scroll;
+    overflow-x: auto;
     z-index: 1;
     border: 1px solid grey;
-    
 }
 
-.header{
+.header {
+    text-align: end;
     width: 100%;
     height: 10%;
-    text-align: end;
     background-color: var(--var-light-clr);
     position: sticky;
     top: 0px;
 }
 
-.fa-x{
+.fa-x {
     padding: 10px 2px 10px 10px;
     font-size: 1.2rem;
     cursor: pointer;
@@ -161,10 +161,10 @@ body {
     }
 
     .category-card {
-        width: 150px;
-        top: 100px;
+        width: 250px;
+        top: 150px;
         left: 30%;
-        height: 150px;
+        height: 200px;
     }
 
 }
@@ -201,7 +201,6 @@ body {
         margin-right: 1rem;
     }
 
-
     #categoryBtn {
         padding: 6px;
         cursor: pointer;
@@ -210,16 +209,21 @@ body {
         margin-top: 40px;
     }
 
-    .category-card {
-        width: 150px;
-        top: 100px;
-        left: 30%;
-        height: 200px;
+    .fa-x {
+        padding: 10px 2px 10px 10px;
+        font-size: 1rem;
+        cursor: pointer;
     }
 
-    .categories li {
-        font-size: 1rem;
+    .category-card {
+        width: 150px;
+        top: 150px;
+        left: 30%;
+        height: 150px;
+    }
+
+    .category-card-options li {
+        font-size: 0.7rem;
     }
 
 }
-
